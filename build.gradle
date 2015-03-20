@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+version = '0.1'
+
+mainClassName = "net.spirulence.sortinggame.RunSortingGame"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile "com.badlogicgames.gdx:gdx:1.5.5"
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:1.5.5"
+    compile "com.badlogicgames.gdx:gdx-platform:1.5.5:natives-desktop"
+
+    compile fileTree(dir: 'dependencies', include: '*.jar')
+
+    compile "com.google.guava:guava:18.0"
+}
